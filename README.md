@@ -52,18 +52,22 @@ python3 generate_docs.py https://github.com/vuejs/docs --version 3.x
 python3 generate_docs.py REPO_URL [OPTIONS]
 ```
 
-### Options
+## Command Line Options
 
-- `--root FOLDER` - Root folder containing markdown files (default: repo root)
-- `--branch BRANCH` - Branch to clone (default: main)
-- `--name NAME` - Project name (auto-detected from GitHub)
-- `--version VERSION` - Version tag for output filenames
-- `--base-url URL` - Base URL for documentation links (auto-detected)
-- `--description TEXT` - Project description (auto-detected)
-- `--output-dir DIR` - Output directory (default: current directory)
-- `--index-only` - Generate only llms.txt (index)
-- `--full-only` - Generate only llms-full.txt (complete docs)
-- `--keep-repo` - Keep cloned repository after generation
+### Required
+- **`repo_url`** - GitHub repository URL (e.g., `https://github.com/owner/repo`)
+
+### Optional
+- **`--root FOLDER`** - Root folder within repo containing markdown files (default: repository root)
+- **`--branch BRANCH`** - Branch to clone (default: `main`, falls back to `master` if not found)
+- **`--name NAME`** - Project name (default: auto-detected from GitHub)
+- **`--version VERSION`** - Version string to include in output (adds suffix to filenames)
+- **`--base-url URL`** - Base URL for documentation links (default: auto-detected from GitHub About)
+- **`--description TEXT`** - Project description (default: auto-detected from GitHub About)
+- **`--output-dir DIR`** - Output directory for generated files (default: current directory)
+- **`--keep-repo`** - Keep the cloned repository after generation (useful for debugging)
+- **`--index-only`** - Generate only llms.txt (index)
+- **`--full-only`** - Generate only llms-full.txt (complete docs)
 
 ## Examples
 
